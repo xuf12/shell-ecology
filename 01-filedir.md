@@ -3,17 +3,15 @@ layout: lesson
 root: ../..
 title: Files and Directories
 ---
-<div class="objectives" markdown="1">
 
 #### Objectives
+
 *   Explain the similarities and differences between a file and a directory.
 *   Translate an absolute path into a relative path and vice versa.
 *   Construct absolute and relative paths that identify specific files and directories.
 *   Explain the steps in the shell's read-run-print cycle.
 *   Identify the actual command, flags, and filenames in a command-line call.
 *   Demonstrate the use of tab completion, and explain its advantages.
-
-</div>
 
 The part of the operating system responsible for managing files and directories
 is called the [file system](../../gloss.html#filesystem).
@@ -468,8 +466,6 @@ and we will see it in many other tools as we go on.
 > however
 > no-one really does that, it can lead to pretty damaging mistakes.
 
-<div class="keypoints" markdown="1">
-
 #### Key Points
 *   The file system is responsible for managing information on the disk.
 *   Information is stored in files, which are stored in directories (folders).
@@ -485,10 +481,6 @@ and we will see it in many other tools as we go on.
     and doesn't guarantee anything,
     but is normally used to indicate the type of data in the file.
 *   Most commands take options (flags) which begin with a '-'.
-
-</div>
-
-<div class="challenges" markdown="1">
 
 #### Challenges
 
@@ -520,4 +512,3 @@ and we will see it in many other tools as we go on.
     4.  It produces an error message.
  
 4.  What does the command `ls` do when used with the -s and -h arguments?
-</div>

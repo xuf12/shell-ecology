@@ -27,7 +27,6 @@ let's open a shell window:
 ~~~
 $
 ~~~
-{:class="in"}
 
 The dollar sign is a [prompt](../../gloss.html#prompt),
 which shows us that the shell is waiting for input;
@@ -42,11 +41,10 @@ it shows us who the shell thinks we are:
 ~~~
 $ whoami
 ~~~
-{:class="in"}
+
 ~~~
 vlad
 ~~~
-{:class="out"}
 
 More specifically, when we type `whoami` the shell:
 
@@ -71,11 +69,10 @@ which is Vlad's [home directory](../../gloss.html#home-directory):
 ~~~
 $ pwd
 ~~~
-{:class="in"}
+
 ~~~
 /users/vlad
 ~~~
-{:class="out"}
 
 ### Getting help
 
@@ -153,13 +150,12 @@ which stands for "listing":
 ~~~
 $ ls
 ~~~
-{:class="in"}
+
 ~~~
 bin          data      mail       music
 notes.txt    papers    pizza.cfg  solar
 solar.pdf    swc
 ~~~
-{:class="out"}
 
 <img src="img/vlad-homedir.svg" alt="Vlad's Home Directory" />
 
@@ -171,13 +167,12 @@ which tells `ls` to add a trailing `/` to the names of directories:
 ~~~
 $ ls -F
 ~~~
-{:class="in"}
+
 ~~~
 bin/         data/     mail/      music/
 notes.txt    papers/   pizza.cfg  solar/
 solar.pdf    swc/
 ~~~
-{:class="out"}
 
 Here,
 we can see that `/users/vlad` contains seven [sub-directories](../../gloss.html#sub-directory).
@@ -219,12 +214,11 @@ we want a listing of something other than our current working directory:
 ~~~
 $ ls -F data
 ~~~
-{:class="in"}
+
 ~~~
 amino-acids.txt   elements/     morse.txt
 pdb/              planets.txt   sunspot.txt
 ~~~
-{:class="out"}
 
 The output shows us that there are four text files and two sub-sub-directories.
 Organizing things hierarchically in this way helps us keep track of our work:
@@ -245,12 +239,11 @@ because `/data` is an [absolute path](../../gloss.html#absolute-path):
 ~~~
 $ ls -F /data
 ~~~
-{:class="in"}
+
 ~~~
 access.log    backup/    hardware.cfg
 network.cfg
 ~~~
-{:class="out"}
 
 The leading `/` tells the computer to follow the path from the root of the filesystem,
 so it always refers to exactly one directory,
@@ -264,21 +257,20 @@ and `ls` without any parameters shows us that directory's contents:
 ~~~
 $ pwd
 ~~~
-{:class="in"}
+
 ~~~
 /users/vlad
 ~~~
-{:class="out"}
+
 ~~~
 $ ls
 ~~~
-{:class="in"}
+
 ~~~
 bin/         data/     mail/      music/
 notes.txt    papers/   pizza.cfg  solar/
 solar.pdf    swc/
 ~~~
-{:class="out"}
 
 We can use `cd` followed by a directory name to change our working directory.
 `cd` stands for "change directory",
@@ -289,7 +281,6 @@ it changes the shell's idea of what directory we are in.
 ~~~
 $ cd data
 ~~~
-{:class="in"}
 
 `cd` doesn't print anything,
 but if we run `pwd` after it, we can see that we are now in `/users/vlad/data`.
@@ -300,20 +291,19 @@ because that's where we now are:
 ~~~
 $ pwd
 ~~~
-{:class="in"}
+
 ~~~
 /users/vlad/data
 ~~~
-{:class="out"}
+
 ~~~
 $ ls
 ~~~
-{:class="in"}
+
 ~~~
 amino-acids.txt   elements/     morse.txt
 pdb/              planets.txt   sunspot.txt
 ~~~
-{:class="out"}
 
 We now know how to go down the directory tree:
 how do we go up?
@@ -322,22 +312,20 @@ We could use an absolute path:
 ~~~
 $ cd /users/vlad
 ~~~
-{:class="in"}
 
 but it's almost always simpler to use `cd ..` to go up one level:
 
 ~~~
 $ pwd
 ~~~
-{:class="in"}
+
 ~~~
 /users/vlad/data
 ~~~
-{:class="out"}
+
 ~~~
 $ cd ..
 ~~~
-{:class="in"}
 
 `..` is a special directory name meaning
 "the directory containing this one",
@@ -349,11 +337,10 @@ if we run `pwd` after running `cd ..`, we're back in `/users/vlad`:
 ~~~
 $ pwd
 ~~~
-{:class="in"}
+
 ~~~
 /users/vlad
 ~~~
-{:class="out"}
 
 The special directory `..` doesn't usually show up when we run `ls`.
 If we want to display it, we can give `ls` the `-a` flag:
@@ -361,13 +348,13 @@ If we want to display it, we can give `ls` the `-a` flag:
 ~~~
 $ ls -F -a
 ~~~
-{:class="in"}
+
 ~~~
 ./           ../       bin/       data/
 mail/        music/    notes.txt  papers/
 pizza.cfg    solar/    solar.pdf    swc/
 ~~~
-{:class="out"}
+
 
 `-a` stands for "show all";
 it forces `ls` to show us file and directory names that begin with `.`,
@@ -429,7 +416,6 @@ Nelle can see what files she has using the command:
 ~~~
 $ ls north-pacific-gyre/2012-07-03/
 ~~~
-{:class="in"}
 
 This is a lot to type,
 but she can let the shell do most of the work.
@@ -438,7 +424,6 @@ If she types:
 ~~~
 $ ls no
 ~~~
-{:class="in"}
 
 and then presses tab,
 the shell automatically completes the directory name for her:
@@ -446,7 +431,6 @@ the shell automatically completes the directory name for her:
 ~~~
 $ ls north-pacific-gyre/
 ~~~
-{:class="in"}
 
 If she presses tab again,
 Bash will add `2012-07-03/` to the command,
